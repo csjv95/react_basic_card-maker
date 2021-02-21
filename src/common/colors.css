@@ -1,3 +1,4 @@
+@value makerWheat: wheat;
 @value makerBlack: black;
 @value makerWhite: white;
 @value makerDarkWhite: #f5f5f3;
@@ -5,4 +6,6 @@
 @value makerLightPink: #ffeae8;
 @value makerGrey: #626262;
 @value makerGreen: #385461;
-@value makerblue: #1cb6e0;
+@value makerBlue: #1cb6e0;
+@value makerShadow :rgba(217, 217, 217, 1);
+@value makerColorFul: linear-gradient(90deg, rgba(226,117,212,1) 75%, rgba(0,212,255,1) 100%);

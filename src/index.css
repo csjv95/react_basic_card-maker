@@ -20,8 +20,13 @@ ul {
   list-style: none;
 }
 
+li {
+  list-style: none;
+}
+
 button {
   outline: none;
   background-color: transparent;
   cursor: pointer;
 }
+

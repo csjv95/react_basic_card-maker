@@ -1,13 +1,12 @@
 @value makerGreen from '../../common/colors.css';
 
 .editor {
-  display: flex;
-  justify-content: center;
   flex-basis: 50%;
   background-color: wheat;
 }
 
 .title {
   margin-bottom: 1em;
+  text-align: center;
   color: makerGreen;
 }
