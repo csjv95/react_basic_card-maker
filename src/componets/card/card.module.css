@@ -6,7 +6,6 @@
   margin: 0.5em 0;
   padding: 0.2em 0;
   display: flex;
-  flex-wrap: wrap;
   border-radius: 1em;
   box-shadow: 6px 6px 8px 0px rgba(217, 217, 217, 1);
   /* position:relative; */
@@ -41,7 +40,7 @@
 }
 
 .info {
-  width: 50%;
+  width: 100%;
 }
 
 .name {

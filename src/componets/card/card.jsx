@@ -23,7 +23,7 @@ const Card = ({ card }) => {
         <option value="colorFull">Color Full</option>
       </select>
       </label> */}
-
+  
       <img className={styles.avatar} src={url} alt="profile img" />
       <div className={styles.info}>
         <h3 className={styles.name}>{name}</h3>
