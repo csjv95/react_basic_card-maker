@@ -1,13 +1,20 @@
-import React, { useRef, useState } from "react";
+import React, { useRef } from "react";
 import styles from "./card_edit_form.module.css";
 import Button from "../button/button";
-import ImageFileInput from "../image_file_input/image_file_input";
 
-const CardEditForm = ({ card, updateCard, deleteCard }) => {
-  const { id, name, theme, title, email, fileURL, company, message } = card;
+const CardEditForm = ({ card, updateCard, deleteCard, FileInput }) => {
+  const {
+    name,
+    theme,
+    title,
+    email,
+    fileURL,
+    fileName,
+    company,
+    message,
+  } = card;
 
-  // const nameRef = useRef('');
-  const [nameWrite, setNameWrite] = useState(name);
+  const nameRef = useRef("");
   const companyRef = useRef("");
   const selectRef = useRef();
   const titleRef = useRef();
@@ -18,31 +25,33 @@ const CardEditForm = ({ card, updateCard, deleteCard }) => {
     deleteCard(card);
   };
 
-  const onChange = (event) => {
-    if(event.currentTarget == null) {
-      return
-    }
+  const onFileChange = (file) => {
+    updateCard({
+      ...card,
+      fileName: file.name,
+      fileURL: file.url,
+    });
+  };
 
+  const onChange = (event) => {
+    if (event.currentTarget == null) {
+      return;
+    }
     event.preventDefault();
     updateCard({
       ...card,
       [event.currentTarget.name]: event.currentTarget.value,
     });
   };
-
-  const onChangeTwo = (event) => {
-    setNameWrite(event.target.value);
-  };
-
   return (
     <form className={styles.form}>
       <input
         className={styles.input}
-        // ref={nameRef}
+        ref={nameRef}
         type="text"
         name="name"
-        value={nameWrite}
-        onChange={onChangeTwo}
+        value={name}
+        onChange={onChange}
       />
       <input
         className={styles.input}
@@ -88,7 +97,7 @@ const CardEditForm = ({ card, updateCard, deleteCard }) => {
         {message}
       </textarea>
       <div className={styles.fileInput}>
-        <ImageFileInput />
+        <FileInput name={fileName}onFileChange={onFileChange} />
       </div>
       <Button name="Delete" onClick={onSubmit} />
     </form>
