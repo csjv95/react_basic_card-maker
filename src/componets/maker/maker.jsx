@@ -31,7 +31,7 @@ const Maker = ({ authService, FileInput }) => {
     },
     3: {
       id: 3,
-      name: "Min",
+      name: "eve",
       theme: "colorful",
       title: "front-end",
       email: "min@gamil.com",

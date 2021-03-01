@@ -8,14 +8,8 @@
   display: flex;
   border-radius: 1em;
   box-shadow: 6px 6px 8px 0px rgba(217, 217, 217, 1);
-  /* position:relative; */
 }
 
-/* .choose_bg {
-  position: absolute;
-  top: 0;
-  right: 0;
-} */
 
 .card.light {
   background-color: makerWhite;
@@ -47,6 +41,7 @@
   margin-bottom: 0;
 }
 
+.title,
 .email,
 .company,
 .message {

@@ -8,7 +8,7 @@ const CardEditForm = ({ card, updateCard, deleteCard, FileInput }) => {
   const nameRef = useRef("");
   const companyRef = useRef("");
   const selectRef = useRef();
-  const titleRef = useRef();
+  const titleRef = useRef("");
   const emailRef = useRef("");
   const messageRef = useRef("");
 
