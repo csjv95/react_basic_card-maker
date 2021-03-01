@@ -3,16 +3,7 @@ import styles from "./card_edit_form.module.css";
 import Button from "../button/button";
 
 const CardEditForm = ({ card, updateCard, deleteCard, FileInput }) => {
-  const {
-    name,
-    theme,
-    title,
-    email,
-    fileURL,
-    fileName,
-    company,
-    message,
-  } = card;
+  const { name, theme, title, email, fileName, company, message } = card;
 
   const nameRef = useRef("");
   const companyRef = useRef("");
@@ -97,7 +88,7 @@ const CardEditForm = ({ card, updateCard, deleteCard, FileInput }) => {
         {message}
       </textarea>
       <div className={styles.fileInput}>
-        <FileInput name={fileName}onFileChange={onFileChange} />
+        <FileInput name={fileName} onFileChange={onFileChange} />
       </div>
       <Button name="Delete" onClick={onSubmit} />
     </form>
